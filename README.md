@@ -9,6 +9,8 @@
 - [Youtube](https://www.youtube.com/channel/UCxZEC_fR0VrefLmtiJPBTBA)
 - [X (Twitter)](https://x.com/buildappswithme)
 - [Oficial Site](https://www.vincibits.com/welcome)
+- [Github Original Project](https://github.com/pdichone/ollama-fundamentals)
+- [Github](https://github.com/pdichone)
 
 ---
 
