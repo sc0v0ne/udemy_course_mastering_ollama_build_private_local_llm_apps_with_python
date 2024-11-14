@@ -74,3 +74,8 @@ Harness the capabilities of local LLMs on your own system and take your skills t
 - Beginners to LLMs and Ollama who have basic Python knowledge and are eager to learn about AI application development.
 - Beginners to LLMs and Ollama who have basic Python knowledge and are eager to learn about AI application development.
 - Educators and Trainers seeking to incorporate AI and LLMs into their curriculum or training programs without relying on external services.
+
+
+### Resources Ollama
+
+- https://github.com/ollama/ollama/blob/main/docs/api.md
