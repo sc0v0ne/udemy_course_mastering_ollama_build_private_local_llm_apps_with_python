@@ -11,6 +11,10 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 import os.path as osp
 import ollama as oll
 from time import time
+import logging
+import streamlit as st
+
+logging.basicConfig(level=logging.INFO)
 
 def load_pdf(doc_path, verbose: int = 0):
     start = time()
@@ -97,13 +101,24 @@ def main():
     vector_db = make_vector_db(chunks)
     chain = retrieval(MODEL, vector_db)
 
-    # res = chain.invoke(input=("what is the document about?",))
-    # res = chain.invoke(
-    #     input=("what are the main points as a business owner I should be aware of?",)
-    # )
-    res = chain.invoke(input=("how to report BOI?",))
+    st.title("Document Assistant")
 
-    print(res)
+    # User input
+    user_input = st.text_input("Enter your question:", "")
+
+    if user_input:
+        with st.spinner("Generating response..."):
+            try:
+
+                response = chain.invoke(input=user_input)
+
+                st.markdown("**Assistant:**")
+                st.write(response)
+            except Exception as e:
+                st.error(f"An error occurred: {str(e)}")
+    else:
+        st.info("Please enter a question to get started.")
+
 
 if __name__ == "__main__":
     main()

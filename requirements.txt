@@ -12,3 +12,4 @@ fastembed
 pdfplumber
 sentence-transformers
 elevenlabs
+streamlit
